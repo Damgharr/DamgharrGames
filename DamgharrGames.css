@@ -38,6 +38,24 @@ a {
         display: flex;
     }
 
+    .container.img-Game1 {
+        height: 26rem;
+        width: 60%;
+        border-radius: 25px ;
+        background-image: url("JumpingBallzPCImage.png");
+    }
+
+    .img-Game1 .game-name {
+        position: absolute;
+        left: 65%;
+        top:18%;
+        color:#1a1a1a;
+    }
+
+    .text-container {
+        display: flex;
+    }
+
 
 }
 
@@ -52,6 +70,11 @@ a {
     justify-content: space-between;
     align-items: end;
     gap: 1rem;
+}
+
+.pc-menu .nav-menu {
+    justify-content: space-between;
+
 }
 
 
@@ -85,8 +108,27 @@ a {
     background-blend-mode:luminosity;
 }
 
+.text-container {
+    width: 30%;
+    background-color: #3366ff;
+    border-radius: 25px ;
+    color:#ffe6ff;
+    height: 12rem;
+}
+
+.img-Game1 .text-container {
+    position: absolute;
+    left: 65%;
+}
+
 .img-Game1 {
     background-image: url("JumpingBallz.png");
+}
+
+.game-description {
+    font-size: medium;
+    text-align: left;
+    margin-left: 8%;
 }
 
 .montserrat-font {
