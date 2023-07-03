@@ -11,6 +11,8 @@
             Dämgharrs' Games
         </header>
 
+        <p id="home" class="montserrat-font bold-font margin-left phone-title-font-size">About</p>
+
         <nav class="pc-menu padding-m" hidden>
             <ul class="nav-menu flex-row flex">
                 <li>
@@ -26,28 +28,45 @@
         </nav>
 
         <div class="margin-top margin-left">
-            <button class="container img-Game1 montserrat-font font-size-m">
+            <button class="Jumping-ballz container img-Game1 montserrat-font font-size-m flex-column flex">
                 <p class="game-name bold-font">Jumping ballz</p>
-                <div class="text-container" hidden>
-                    <p class="game-description">This is a prototype of my first 2d platformer game.</p>
+                <div class="text-container padding-m" hidden>
+                    <p class="game-description">Oh yeah ! This little red blob is going to be the playable character, and YOUR mission is to beat 
+                        some levels while having to jump ! Dash ! and kick some robot butts ! Will this (not so) mighty hero defeat the enemy ?
+                        <br> <br>
+                        This is the first video game I made under Godot, and for now it's only a prototype. But I have some really good ideas for it,
+                        for now enjoy what I made !
+                    </p>
                 </div>
-            </button>
-            <button class="container montserrat-font font-size-m">
-                Coming Soon...
             </button>
         </div>
 
+        <div class="github-link margin-m montserrat-font">
+                <a href="https://github.com/Damgharr/Jumping_balls" class="flex flex-row" target="_blank" rel="noopener noreferrer">
+                    <img src="github-mark/github-mark/github-mark.png" alt="github" width="50px" height="50px">
+                    <p>Jumping Ballz Github repository</p>
+                </a>
+        </div>
+
+        <div id="about" class="about-section padding-m">
+            <p class="montserrat-font bold-font margin-left phone-title-font-size">About</p>
+
+            <div class="about-container montserrat-font margin-m margin-bottom padding-m phone-text-font-size">
+                <p>This site was made by me, Dämgharr, and it's where I will post and update most of the games and their prototypes that I will make. 
+                    For most of these games, I will be posting their codes on github so that you can check them out and see how I have developed some games.
+                </p>
+            </div>
+        </div>
+
+
 
         <nav class="phone-menu padding-m flex align-end flex-column rounded-m shadow-50 montserrat-font">
-            <ul class="nav-menu flex-column color-link">
+            <ul class="nav-menu flex-column color-link" >
                 <li class="nav-item">
-                    <a href="#">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Options</a>
+                    <a href="#about">About</a>
                 </li>
             </ul>
             <div class="menu-open icon circle background-accent padding-m margin-m">
@@ -62,13 +81,26 @@
             </div>
         </nav>
 
+
         <script>
             const menuOpenButton = document.querySelector(".menu-open");
             const menuCloseButton = document.querySelector(".menu-close");
             const menuList = document.querySelector(".phone-menu .nav-menu");
+            const JumpingBallzButton = document.querySelector(".Jumping-ballz");
+            const JumpingBallzDescription = document.querySelector(".Jumping-ballz .text-container");
+            const browserViewport = $(window).width();
             const nav = document.querySelector("nav.phone-menu");
 
             menuList.classList.add("hidden");
+
+            JumpingBallzButton.addEventListener("click", e => {
+                if (JumpingBallzDescription.contains(hidden)) {
+                    JumpingBallzDescription.classList.remove("hidden")
+                };
+                if (!JumpingBallzDescription.contains(hidden)) {
+                    JumpingBallzDescription.classList.add("hidden")
+             };
+            } );
 
             menuOpenButton.addEventListener("click", e => {
                 menuOpenButton.hidden = true;

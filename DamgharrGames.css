@@ -9,6 +9,7 @@
 
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 } 
 
 body {
@@ -30,14 +31,6 @@ a {
 }
 
 @media screen and (min-width: 1080px) {
-    .menu-open {
-        display: none;
-    }
-
-    .pc-menu {
-        display: flex;
-    }
-
     .container.img-Game1 {
         height: 26rem;
         width: 60%;
@@ -56,11 +49,15 @@ a {
         display: flex;
     }
 
+    .phone-title-font-size {
+        margin-left: 3rem;
+    }
+
 
 }
 
 .phone-menu {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     z-index: 1;
@@ -94,6 +91,10 @@ a {
     margin-left: 1rem;
 }
 
+.margin-bottom {
+    margin-bottom: 10rem;
+}
+
 .container {
     height: 12rem;
     width: 90%;
@@ -113,7 +114,23 @@ a {
     background-color: #3366ff;
     border-radius: 25px ;
     color:#ffe6ff;
-    height: 12rem;
+    top: 20rem;
+}
+
+.about-container {
+    position: relative;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background-color:#3366ff;
+    color:#ffe6ff;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+.about-section {
+    background-color: #a1adc6;
 }
 
 .img-Game1 .text-container {
@@ -131,6 +148,15 @@ a {
     margin-left: 8%;
 }
 
+.github-link {
+    margin-bottom: 3rem;
+    z-index: 3;
+}
+
+.github-link p {
+    color: #1a1a1a;
+}
+
 .montserrat-font {
     font-family: 'montserrat', sans-serif;
 }
@@ -143,6 +169,12 @@ a {
 .font-size-m {
     font-size: 2rem;
 }
+
+.phone-title-font-size {
+    font-size: 1.5rem;
+}
+.phone-text-font-size {
+    font-size: 1.4rem;}
 
 .Img-Game1 {
     position:relative;
@@ -201,4 +233,13 @@ a {
 a {
     color:#ffe6ff;
     text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.end-of-page {
+    width: 100%;
+    height: 2rem;
 }
