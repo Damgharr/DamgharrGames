@@ -61,7 +61,7 @@
 
 
         <nav class="phone-menu padding-m flex align-end flex-column rounded-m shadow-50 montserrat-font">
-            <ul class="nav-menu flex-column color-link" >
+            <ul class="nav-menu flex-column color-link">
                 <li class="nav-item">
                     <a href="#home">Home</a>
                 </li>
@@ -88,8 +88,8 @@
             const menuList = document.querySelector(".phone-menu .nav-menu");
             const JumpingBallzButton = document.querySelector(".Jumping-ballz");
             const JumpingBallzDescription = document.querySelector(".Jumping-ballz .text-container");
-            const browserViewport = $(window).width();
             const nav = document.querySelector("nav.phone-menu");
+            
 
             menuList.classList.add("hidden");
 
@@ -101,6 +101,7 @@
                     JumpingBallzDescription.classList.add("hidden")
              };
             } );
+
 
             menuOpenButton.addEventListener("click", e => {
                 menuOpenButton.hidden = true;
